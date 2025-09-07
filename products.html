@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукция - Информационная безопасность</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="./index.html"><img src="assets/img/logo.png" alt=""></div></a>
+                
+                <nav class="nav-desktop">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+                </nav>
+                <div class="header-right">
+                <div class="profile-icon" id="profileIcon">
+                <i class="fas fa-user-circle"></i>
+                </div>
+                    <div class="contact-info">
+                        <div class="phone">+7 (937) 921-01-64</div>
+                    </div>
+                    
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <i class="fas fa-sun sun"></i>
+                            <i class="fas fa-moon moon"></i>
+                        </span>
+                    </label>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="nav-mobile" id="navMobile">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Продукция для информационной безопасности</h1>
+            <p>Современные решения для защиты ваших данных и инфраструктуры</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h1>Наша продукция</h1>
+                <h2>Сертифицированные средства защиты информации</h2>
+            </div>
+
+            <!-- Filter -->
+            <div class="filter">
+                <button class="filter-btn active" data-filter="all">Все продукты</button>
+                <button class="filter-btn" data-filter="protection">Защита данных</button>
+                <button class="filter-btn" data-filter="network">Сетевая защита</button>
+                <button class="filter-btn" data-filter="crypto">Криптография</button>
+                <button class="filter-btn" data-filter="monitoring">Мониторинг</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product cards will be here -->
+                <div class="product-card animate" data-category="protection">
+                    <div class="product-image">
+                        <img src="./assets/img/product-nsd.png" alt="Средства защиты от несанкционированного доступа">
+                        <span class="product-badge">Хит</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства защиты от несанкционированного доступа (СЗНД)</h3>
+                        <p class="product-description">Комплексная защита от несанкционированного доступа к
+                            информационным ресурсам</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Контроль доступа</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Аудит действий</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Шифрование данных</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 45 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('sznd')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="detection">
+                    <div class="product-image">
+                        <img src="./assets/img/product-os.png" alt="Обнаружительные системы">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Обнаружительные системы</h3>
+                        <p class="product-description">Системы обнаружения и предотвращения вторжений в информационную
+                            инфраструктуру</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Мониторинг угроз</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Анализ аномалий</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Оперативное реагирование</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 68 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('obsys')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="network">
+                    <div class="product-image">
+                        <img src="./assets/img/product-fw.png" alt="Межсетевые экраны">
+                        <span class="product-badge">Новинка</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Межсетевые экраны</h3>
+                        <p class="product-description">Защита периметра сетей от внешних угроз и несанкционированного
+                            доступа</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Контроль трафика</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>VPN</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Антивирусная проверка</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 78 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('firewall')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="crypto">
+                    <div class="product-image">
+                        <img src="./assets/img/product-crypt.png" alt="СКЗИ">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства криптографической защиты информации (СКЗИ)</h3>
+                        <p class="product-description">Обеспечение конфиденциальности и целостности информации с помощью
+                            шифрования</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Шифрование данных</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>ЭЦП</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Сертифицировано ФСБ</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 32 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('skzi')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="boot">
+                    <div class="product-image">
+                        <img src="./assets/img/product-boot.png" alt="Средства доверенной загрузки">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства доверенной загрузки</h3>
+                        <p class="product-description">Обеспечение целостности и неизменности процесса загрузки
+                            операционной системы</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Контроль целостности</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Защита от изменений</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Аутентификация</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 28 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('boot')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="network">
+                    <div class="product-image">
+                        <img src="./assets/img/product-ids.png" alt="Система обнаружения вторжений">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Система обнаружения вторжений (IDS)</h3>
+                        <p class="product-description">Обнаружение и предотвращение сетевых атак и несанкционированных
+                            действий</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Анализ сетевого трафика</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Сигнатурный анализ</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Поведенческий анализ</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 65 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('ids')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="data">
+                    <div class="product-image">
+                        <img src="./assets/img/product-channel.png" alt="Защита каналов передачи данных">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства защиты каналов передачи данных</h3>
+                        <p class="product-description">Обеспечение безопасности передачи информации по каналам связи</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Шифрование трафика</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Защита от перехвата</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Аутентификация каналов</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 53 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('data')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="protection">
+                    <div class="product-image">
+                        <img src="./assets/img/product-antivirus.png" alt="Антивирусная защита">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства антивирусной защиты</h3>
+                        <p class="product-description">Комплексная защита от вредоносного программного обеспечения и
+                            кибератак</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Защита в реальном времени</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Обновления угроз</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Централизованное управление</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 25 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('antivirus')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="analysis">
+                    <div class="product-image">
+                        <img src="./assets/img/product-assessment.png" alt="Средства анализа защищенности">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства анализа защищенности</h3>
+                        <p class="product-description">Выявление уязвимостей и оценка уровня защищенности информационных
+                            систем</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Сканирование уязвимостей</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Аудит конфигураций</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Генерация отчетов</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 47 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('analysis')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="mobile">
+                    <div class="product-image">
+                        <img src="./assets/img/product-mobile.png" alt="Защита мобильных устройств">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Средства защиты мобильных устройств</h3>
+                        <p class="product-description">Комплексная защита мобильных устройств и корпоративных данных на
+                            них</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Защита данных</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Управление устройствами</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Шифрование связи</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 36 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('mobile')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="backup">
+                    <div class="product-image">
+                        <img src="./assets/img/product-backup.png" alt="Системы резервного копирования">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Системы резервного копирования</h3>
+                        <p class="product-description">Обеспечение сохранности и доступности данных при сбоях и авариях
+                        </p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Резервное копирование</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Восстановление данных</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Архивирование</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 41 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('backup')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-category="monitoring">
+                    <div class="product-image">
+                        <img src="./assets/img/product-siem.png" alt="SIEM системы">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Система управления событиями ИБ (SIEM)</h3>
+                        <p class="product-description">Мониторинг и управление событиями информационной безопасности в
+                            реальном времени</p>
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Сбор и анализ событий</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Корреляция событий</span>
+                            </div>
+                            <div class="product-feature">
+                                <span class="feature-icon"><i class="fas fa-check"></i></span>
+                                <span>Отчетность</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">от 120 000 ₽</span>
+                            <button class="btn-primary" onclick="openProductModal('silm')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Добавьте остальные карточки продуктов здесь -->
+
+        </div>
+
+        <!-- Slider -->
+        <div class="slider-container animate">
+            <div class="slider-track" id="sliderTrack">
+                <div class="slider-slide">
+                    <img src="https://placehold.co/1000x400/252525/3a7bd5?text=Сертифицированные+решения"
+                        alt="Сертифицированные решения">
+                    <div class="slider-caption">
+                        <h3>Сертифицированные решения</h3>
+                        <p>Вся продукция имеет необходимые сертификаты и лицензии ФСТЭК и ФСБ России</p>
+                    </div>
+                </div>
+                <div class="slider-slide">
+                    <img src="https://placehold.co/1000x400/252525/3a7bd5?text=Техническая+поддержка"
+                        alt="Техническая поддержка">
+                    <div class="slider-caption">
+                        <h3>Техническая поддержка 24/7</h3>
+                        <p>Круглосуточная поддержка наших специалистов для решения любых вопросов</p>
+                    </div>
+                </div>
+                <div class="slider-slide">
+                    <img src="https://placehold.co/1000x400/252525/3a7bd5?text=Внедрение+и+обучение"
+                        alt="Внедрение и обучение">
+                    <div class="slider-caption">
+                        <h3>Внедрение и обучение</h3>
+                        <p>Помощь во внедрении и обучение ваших сотрудников работе с системами защиты</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-nav slider-prev" id="sliderPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-nav slider-next" id="sliderNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Защита информации</a></li>
+                        <li><a href="#">КИИ</a></li>
+                        <li><a href="#">Кибербезопасность</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Подключение к ГИС</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">СЗНД</a></li>
+                        <li><a href="#">СКЗИ</a></li>
+                        <li><a href="#">Межсетевые экраны</a></li>
+                        <li><a href="#">Антивирусная защита</a></li>
+                        <li><a href="#">SIEM системы</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> +7 (937) 921-01-64</p>
+                        <p><i class="fas fa-envelope"></i> info@SecureSphere.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Ленина, д. 133, офис 661</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 SecureSphere. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeProductModal">&times;</span>
+            <div id="productModalContent">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeOrderModal">&times;</span>
+            <div id="orderModalContent">
+                <!-- Order form will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно авторизации -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <span class="close-auth-modal" id="closeAuthModal">
+                <i class="fas fa-times"></i>
+            </span>
+            
+            <!-- Форма регистрации -->
+            <div class="auth-form-container">
+                <h2>Регистрация</h2>
+                <form class="auth-form" id="registerForm">
+                    <div class="form-group">
+                        <label for="reg-name">Имя</label>
+                        <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" name="email" required placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Пароль</label>
+                        <input type="password" id="reg-password" name="password" required placeholder="Не менее 8 символов">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Подтверждение пароля</label>
+                        <input type="password" id="reg-confirm-password" name="confirm-password" required placeholder="Повторите пароль">
+                    </div>
+                <button type="submit" class="auth-btn">Зарегистрироваться</button>
+                </form>
+            </div>
+            
+            <div class="auth-divider"></div>
+            
+            <!-- Форма входа -->
+            <div class="auth-form-container">
+                <h2>Вход</h2>
+                <form class="auth-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Пароль</label>
+                        <input type="password" id="login-password" name="password" required placeholder="Введите ваш пароль">
+                    </div>
+                 <button type="submit" class="auth-btn">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/product.js"></script>
+</body>
+
+</html>

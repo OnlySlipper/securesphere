@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Информационная безопасность</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="./css/contacs.css">
+</head>
+<body>
+    <!-- Header -->
+  <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="./index.html"><img src="assets/img/logo.png" alt=""></div></a>
+                
+                <nav class="nav-desktop">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+                </nav>
+                <div class="header-right">
+                <div class="profile-icon" id="profileIcon">
+                <i class="fas fa-user-circle"></i>
+                </div>
+                    <div class="contact-info">
+                        <div class="phone">+7 (937) 921-01-64</div>
+                    </div>
+                    
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <i class="fas fa-sun sun"></i>
+                            <i class="fas fa-moon moon"></i>
+                        </span>
+                    </label>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="nav-mobile" id="navMobile">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main  -->
+    <main class="container">
+
+        <div class="breadcrumbs">
+            <a href="#">Главная</a> — <span>контакты</span>
+        </div>
+
+        <section class="page-header">
+            <h1>Контакты</h1>
+        </section>
+
+        <!--Content -->
+        <div class="contact-content">
+            <div class="contact-info-card">
+                <h2>Главный офис</h2>
+                <div class="contact-detail">
+                    <h3>Secure Sphere</h3>
+                    <p>г. Москва, ул. Ленина, д. 123, офис 456</p>
+                    <p>E-mail: info@securesphere.ru</p>
+                </div>
+                
+                <div class="work-hours">
+                    <h3>Режим работы:</h3>
+                    <p>Пн.-Чт.: 8:30-17:30, Пт.: 8:30-16:15</p>
+                </div>
+                
+                <div class="contact-detail">
+                    <h3>Телефон:</h3>
+                    <p>+7 (937) 921-01-64</p>
+                    <p>+7 (4842) 788-999, доб. 50 (техническая поддержка)</p>
+                </div>
+                
+                <div class="support-info">
+                    <h3>Контактная поддержка</h3>
+                    <p>Наша служба поддержки готова ответить на ваши вопросы и помочь с решением проблем.</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder" id="mapPlaceholder">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-right: 15px;"></i>
+                    <span>Загрузка карты...</span>
+                </div>
+                <div id="map" style="display: none;"></div>
+            </div>
+        </div>
+        
+        <!-- Form -->
+        <div class="contact-form">
+            <h2>Напишите нам</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </main>
+            
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Защита информации</a></li>
+                        <li><a href="#">КИИ</a></li>
+                        <li><a href="#">Кибербезопасность</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Подключение к ГИС</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">СЗНД</a></li>
+                        <li><a href="#">СКЗИ</a></li>
+                        <li><a href="#">Межсетевые экраны</a></li>
+                        <li><a href="#">Антивирусная защита</a></li>
+                        <li><a href="#">SIEM системы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> +7 (937) 921-01-64</p>
+                        <p><i class="fas fa-envelope"></i> info@SecureSphere.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Ленина, д. 133, офис 661</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SecureSphere. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div id="modalContent">
+            </div>
+        </div>
+    </div>
+<!-- Модальное окно авторизации -->
+<div class="auth-modal" id="authModal">
+    <div class="auth-modal-content">
+        <span class="close-auth-modal" id="closeAuthModal">
+            <i class="fas fa-times"></i>
+        </span>
+        
+        <!-- Форма регистрации -->
+        <div class="auth-form-container">
+            <h2>Регистрация</h2>
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Имя</label>
+                    <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" name="password" required placeholder="Не менее 8 символов">
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">Подтверждение пароля</label>
+                    <input type="password" id="reg-confirm-password" name="confirm-password" required placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="auth-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+        
+        <div class="auth-divider"></div>
+        
+        <!-- Форма входа -->
+        <div class="auth-form-container">
+            <h2>Вход</h2>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required placeholder="Введите ваш пароль">
+                </div>
+                <button type="submit" class="auth-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <!-- API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
+    
+    <script src="./js/contacs.js"></script>
+</body>
+</html>

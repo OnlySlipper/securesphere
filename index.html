@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информационная безопасность</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+   <!-- Header -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="./index.html"><img src="assets/img/logo.png" alt=""></a></div>
+            
+            <nav class="nav-desktop">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+            </nav>
+            <div class="header-right">
+                <div class="profile-icon" id="profileIcon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="contact-info">
+                    <div class="phone">+7 (937) 921-01-64</div>
+                </div>
+                
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider">
+                        <i class="fas fa-sun sun"></i>
+                        <i class="fas fa-moon moon"></i>
+                    </span>
+                </label>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="nav-mobile" id="navMobile">
+            <a href="index.html">Компания</a>    
+            <a href="services.html">Услуги</a>
+            <a href="products.html">Продукция</a>
+            <a href="projects.html">Проекты</a>
+            <a href="contacs.html">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+    <!-- Модальное окно авторизации -->
+
+<div class="auth-modal" id="authModal">
+    <div class="auth-modal-content">
+        <span class="close-auth-modal" id="closeAuthModal">
+            <i class="fas fa-times"></i>
+        </span>
+        
+        <!-- Форма регистрации -->
+        <div class="auth-form-container">
+            <h2>Регистрация</h2>
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Имя</label>
+                    <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" name="password" required placeholder="Не менее 8 символов">
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">Подтверждение пароля</label>
+                    <input type="password" id="reg-confirm-password" name="confirm-password" required placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="auth-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+        
+        <div class="auth-divider"></div>
+        
+        <!-- Форма входа -->
+        <div class="auth-form-container">
+            <h2>Вход</h2>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required placeholder="Введите ваш пароль">
+                </div>
+                <button type="submit" class="auth-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Комплексные решения в области информационной безопасности</h1>
+            <p>Защита данных, консультации и внедрение современных технологий кибербезопасности для бизнеса и государственных организаций</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+     <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h1>Наши услуги</h1>
+                <h2>Комплексные решения в области информационной безопасности</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </span>
+                        Защита информации
+                    </h3>
+                    <p>Защищаем ИСПДн, государственную и коммерческую тайну, проводим аудит ИБ.</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </span>
+                        Критические информационные инфраструктуры (КИИ)
+                    </h3>
+                    <p>Существуют предприятия, от правильного функционирования которых зависит функционирование всей страны...</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        Кибербезопасность
+                    </h3>
+                    <p>С каждым годом масштабы кибератак и ущерб от них стремительно растут. Кибератакам почти всегда...</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </span>
+                        Обучение в области информационной безопасности
+                    </h3>
+                    <p>В области информационной безопасности важно не только высокий профессиональный навык, но и постоянное...</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </span>
+                        Подключение к государственным информационным системам (ГИС)
+                    </h3>
+                    <p>Данные, хранящиеся в тысячах различных госорганизаций по всей России, проходят через государственные...</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </span>
+                        Импортозамещение
+                    </h3>
+                    <p>Импортозамещение уже давно стало приоритетом государственного значения, и с каждым годом его актуальность...</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </span>
+                        Собственные разработки и внедрение
+                    </h3>
+                    <p>Разрабатываем и внедряем различные ИТ-решения для заказчиков "под ключ".</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <h3>
+                        <span class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </span>
+                        Поставка мультимедиа
+                    </h3>
+                    <p>Поставляем мультимедийное оборудование для учебных классов, актовых и конференц-залов, переговорных...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Продукция</h2>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-item animate" onclick="openModal('sznd')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-nsd.png" alt="">
+                    </div>
+                    <h3>Средства защиты от несанкционированного доступа (СЗНД)</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('obsys')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-os.png" alt="">
+                    </div>
+                    <h3>Обнаружительные системы</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('firewall')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-fw.png" alt="">
+                    </div>
+                    <h3>Межсетевые экраны</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('skzi')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-crypt.png" alt="">
+                    </div>
+                    <h3>Средства криптографической защиты информации (СКЗИ)</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('boot')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-boot.png" alt="">
+                    </div>
+                    <h3>Средства доверенной загрузки</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('ids')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-ids.png" alt="">
+                    </div>
+                    <h3>Система обнаружения вторжений (IDS)</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('data')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-channel.png" alt="">
+                    </div>
+                    <h3>Средства защиты каналов передачи данных</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('antivirus')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-antivirus.png" alt="">
+                    </div>
+                    <h3>Средства антивирусной защиты</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('analysis')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-assessment.png" alt="">
+                    </div>
+                    <h3>Средства анализа защищенности</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('mobile')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-mobile.png" alt="">
+                    </div>
+                    <h3>Средства защиты мобильных устройств</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('backup')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-backup.png" alt="">
+                    </div>
+                    <h3>Системы резервного копирования</h3>
+                </div>
+                
+                <div class="product-item animate" onclick="openModal('silm')">
+                    <div class="product-icon">
+                        <img src="./assets/img/product-siem.png" alt="">
+                    </div>
+                    <h3>Система управления событиями ИБ (SIEM)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Защита информации</a></li>
+                        <li><a href="#">КИИ</a></li>
+                        <li><a href="#">Кибербезопасность</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Подключение к ГИС</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">СЗНД</a></li>
+                        <li><a href="#">СКЗИ</a></li>
+                        <li><a href="#">Межсетевые экраны</a></li>
+                        <li><a href="#">Антивирусная защита</a></li>
+                        <li><a href="#">SIEM системы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> +7 (937) 921-01-64</p>
+                        <p><i class="fas fa-envelope"></i> info@SecureSphere.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Ленина, д. 133, офис 661</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SecureSphere. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div id="modalContent">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

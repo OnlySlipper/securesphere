@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Информационная безопасность</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="./css/projects.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="./index.html"><img src="assets/img/logo.png" alt=""></div></a>
+                
+                <nav class="nav-desktop">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+                </nav>
+                <div class="header-right">
+                <div class="profile-icon" id="profileIcon">
+                <i class="fas fa-user-circle"></i>
+                </div>
+                    <div class="contact-info">
+                        <div class="phone">+7 (937) 921-01-64</div>
+                    </div>
+                    
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <i class="fas fa-sun sun"></i>
+                            <i class="fas fa-moon moon"></i>
+                        </span>
+                    </label>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="nav-mobile" id="navMobile">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main  -->
+    <main class="container">
+        <div class="breadcrumbs">
+            <a href="#">Главная</a> — <span>проекты</span>
+        </div>
+
+        <section class="page-header">
+            <h1>Проекты</h1>
+            <div class="page-description">
+                "Астрал. Безопасность" помогает коммерческим организациям и государственным структурам по всей России выбрать оптимальное ИТ решение под их бизнес, задачи, бюджет и сроки.
+            </div>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-number">1</div>
+                    <div class="feature-text">Знаем, как сделать сложные вещи просто.</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">2</div>
+                    <div class="feature-text">Глубоко исследуем пользовательский опыт и своими решениями изменяем отрасль применения.</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">3</div>
+                    <div class="feature-text">Применяем решения на основе ведущих общепринятых и отечественных практик.</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">4</div>
+                    <div class="feature-text">Быстро реагируем на самые неожиданные изменения и адаптируем наши решения под клиентов здесь и сейчас.</div>
+                </div>
+            </div>
+        </section>
+
+<!-- Filter -->
+
+<div class="projects-filter" id="projectsFilter">
+    <button class="filter-btn active" data-filter="all">ВСЕ ПРОЕКТЫ</button>
+    <button class="filter-btn" data-filter="medicine">МЕДИЦИНА</button>
+    <button class="filter-btn" data-filter="government">ГОСУЧРЕЖДЕНИЯ</button>
+    <button class="filter-btn" data-filter="finance">ФИНАНСЫ</button>
+    <button class="filter-btn" data-filter="evaluation">ОЦЕНКА ЗАЩИЩЕННОСТИ</button>
+    <button class="filter-btn" data-filter="implementation">ВНЕДРЕНИЕ СИСТЕМ</button>
+</div>
+<!-- Projects -->
+<div class="projects-grid" id="projectsGrid">
+    <!--  КИИ -->
+    <div class="project-card" data-category="government">
+        <div class="project-image">
+            <i class="fas fa-server"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">КРИТИЧЕСКИЕ ИНФОРМАЦИОННЫЕ ИНФРАСТРУКТУРЫ</span>
+            <h3 class="project-title">Защита объектов КИИ городской администрации</h3>
+            <p class="project-description">Обеспечение информационной безопасности транспортной системы города</p>
+        </div>
+    </div>
+
+    <!-- Медицина -->
+    <div class="project-card" data-category="medicine">
+        <div class="project-image">
+            <i class="fas fa-hospital"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">МЕДИЦИНА</span>
+            <h3 class="project-title">Защита информации в учреждениях здравоохранения Республики Татарстан</h3>
+            <p class="project-description">Комплексная защита медицинских данных и информационных систем</p>
+        </div>
+    </div>
+
+    <!--  Медицина -->
+    <div class="project-card" data-category="medicine">
+        <div class="project-image">
+            <i class="fas fa-stethoscope"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">МЕДИЦИНА</span>
+            <h3 class="project-title">Аттестация ИС в медицинских организациях Московской области</h3>
+            <p class="project-description">Проведение аттестации информационных систем в медицинских учреждениях</p>
+        </div>
+    </div>
+
+    <!-- Оценка защищенности -->
+    <div class="project-card" data-category="evaluation">
+        <div class="project-image">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">ОЦЕНКА ЗАЩИЩЕННОСТИ</span>
+            <h3 class="project-title">Оценка уровня защищенности ТФОМС Республики Татарстан</h3>
+            <p class="project-description">Комплексная оценка системы защиты информации территориального фонда</p>
+        </div>
+    </div>
+
+    <!--Внедрение систем -->
+    <div class="project-card" data-category="implementation">
+        <div class="project-image">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">ВНЕДРЕНИЕ СИСТЕМ</span>
+            <h3 class="project-title">Мониторинг угроз информационной безопасности</h3>
+            <p class="project-description">Разработка и внедрение системы мониторинга киберугроз в реальном времени</p>
+        </div>
+    </div>
+
+    <!--  Финансы -->
+    <div class="project-card" data-category="finance">
+        <div class="project-image">
+            <i class="fas fa-building"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">ФИНАНСЫ</span>
+            <h3 class="project-title">Центр мониторинга финансовых кибератак</h3>
+            <p class="project-description">Создание центра для анализа и предотвращения финансовых киберпреступлений</p>
+        </div>
+    </div>
+
+    <!--  Госучереждения -->
+    <div class="project-card" data-category="government">
+        <div class="project-image">
+            <i class="fas fa-university"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">ГОСУЧРЕЖДЕНИЯ</span>
+            <h3 class="project-title">Система защиты государственных информационных систем</h3>
+            <p class="project-description">Разработка системы защиты для государственных учреждений и ведомств</p>
+        </div>
+    </div>
+
+    <!--  Медицина -->
+    <div class="project-card" data-category="medicine">
+        <div class="project-image">
+            <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">МЕДИЦИНА</span>
+            <h3 class="project-title">Защита персональных данных в медучреждениях</h3>
+            <p class="project-description">Организация защиты персональных данных пациентов в медицинских учреждениях</p>
+        </div>
+    </div>
+
+    <!--  Оценка защищенности -->
+    <div class="project-card" data-category="evaluation">
+        <div class="project-image">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="project-content">
+            <span class="project-category">ОЦЕНКА ЗАЩИЩЕННОСТИ</span>
+            <h3 class="project-title">Аудит защищенности банковской системы</h3>
+            <p class="project-description">Комплексный аудит системы защиты информации крупного банка</p>
+        </div>
+    </div>
+</div>
+</main>
+            
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Защита информации</a></li>
+                        <li><a href="#">КИИ</a></li>
+                        <li><a href="#">Кибербезопасность</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Подключение к ГИС</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">СЗИ</a></li>
+                        <li><a href="#">СКЗИ</a></li>
+                        <li><a href="#">Межсетевые экраны</a></li>
+                        <li><a href="#">Антивирусная защита</a></li>
+                        <li><a href="#">SIEM системы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> +7 (937) 621-01-84</p>
+                        <p><i class="fas fa-envelope"></i> info@astralsecurity.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Ленина, д. 133, офис 661</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Астрал.Безопасность. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div id="modalContent">
+            </div>
+        </div>
+    </div>
+    <!-- Модальное окно авторизации -->
+<div class="auth-modal" id="authModal">
+    <div class="auth-modal-content">
+        <span class="close-auth-modal" id="closeAuthModal">
+            <i class="fas fa-times"></i>
+        </span>
+        
+        <!-- Форма регистрации -->
+        <div class="auth-form-container">
+            <h2>Регистрация</h2>
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Имя</label>
+                    <input type="text" id="reg-name" name="name" required placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" name="password" required placeholder="Не менее 8 символов">
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">Подтверждение пароля</label>
+                    <input type="password" id="reg-confirm-password" name="confirm-password" required placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="auth-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+        
+        <div class="auth-divider"></div>
+        
+        <!-- Форма входа -->
+        <div class="auth-form-container">
+            <h2>Вход</h2>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required placeholder="Введите ваш пароль">
+                </div>
+                <button type="submit" class="auth-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="js/projects.js"></script>
+</body>
+</html>

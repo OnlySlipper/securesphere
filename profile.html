@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя - SecureSphere</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="./index.html"><img src="./assets/img/logo.png" alt=""></div></a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html">Компания</a>    
+                    <a href="services.html">Услуги</a>
+                    <a href="products.html">Продукция</a>
+                    <a href="projects.html">Проекты</a>
+                    <a href="contacs.html">Контакты</a>
+                    <a href="profile.html" class="active">Профиль</a>
+                </nav>
+                
+                <div class="header-right">
+                    <div class="contact-info">
+                        <div class="phone">+7 (937) 921-01-64</div>
+                    </div>
+                    
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <i class="fas fa-sun sun"></i>
+                            <i class="fas fa-moon moon"></i>
+                        </span>
+                    </label>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="nav-mobile" id="navMobile">
+                <a href="index.html">Компания</a>    
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукция</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contacs.html">Контакты</a>
+                <a href="profile.html" class="active">Профиль</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="./assets/img/avatar.jpg" alt="Аватар пользователя">
+                    <button class="avatar-edit"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-info">
+                    <h1>Иванов Иван Иванович</h1>
+                    <p>Менеджер по информационной безопасности</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="number">15</span>
+                            <span class="label">Проектов</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">3</span>
+                            <span class="label">года</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">98%</span>
+                            <span class="label">Рейтинг</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Личная информация</h3>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ivanov@SecureSphere.ru</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (937) 921-01-64</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Москва</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>АПТ</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Навыки</h3>
+                        <div class="skill">
+                            <span>Кибербезопасность</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Сетевая безопасность</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Аудит ИБ</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main">
+    
+                        <button class="tab-btn active" data-tab="projects">Проекты</button>
+
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="projects">
+                            <div class="project-card">
+                                <h3>Внедрение SIEM системы</h3>
+                                <p class="project-desc">Внедрение системы управления событиями информационной безопасности для крупного банка</p>
+                                <div class="project-meta">
+                                    <span class="status completed">Завершен</span>
+                                    <span class="date">12.10.2023</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h3>Аудит КИИ</h3>
+                                <p class="project-desc">Комплексный аудит критической информационной инфраструктуры</p>
+                                <div class="project-meta">
+                                    <span class="status in-progress">В процессе</span>
+                                    <span class="date">25.11.2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="activity">
+                            <div class="activity-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div class="activity-content">
+                                    <p>Завершил проект "Внедрение СКЗИ"</p>
+                                    <span class="activity-time">2 часа назад</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div class="activity-content">
+                                    <p>Добавил новый отчет по аудиту</p>
+                                    <span class="activity-time">5 часов назад</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="settings">
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label>Имя</label>
+                                    <input type="text" value="Иван">
+                                </div>
+                                <div class="form-group">
+                                    <label>Фамилия</label>
+                                    <input type="text" value="Иванов">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="ivanov@SecureSphere.ru">
+                                </div>
+                                <button type="submit" class="btn-primary">Сохранить изменения</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Защита информации</a></li>
+                        <li><a href="#">КИИ</a></li>
+                        <li><a href="#">Кибербезопасность</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Подключение к ГИС</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">СЗНД</a></li>
+                        <li><a href="#">СКЗИ</a></li>
+                        <li><a href="#">Межсетевые экраны</a></li>
+                        <li><a href="#">Антивирусная защита</a></li>
+                        <li><a href="#">SIEM системы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> +7 (937) 921-01-64</p>
+                        <p><i class="fas fa-envelope"></i> info@SecureSphere.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Ленина, д. 133, офис 661</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SecureSphere. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

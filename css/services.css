@@ -1,0 +1,860 @@
+/* Светлая тема по умолчанию */
+:root {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --text-primary: #212529;
+    --text-secondary: #495057;
+    --accent: #333333;
+    --accent-hover: #7a177e;
+    --border: #dee2e6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --success: #6b2ecc;
+    --success-hover: #322a9e;
+    --primary: #ba34db;
+    --primary-hover: #641f75;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #252525;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent: #ffffff;
+    --accent-hover: #9b1ba1;
+    --border: #333333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --success: #6b2ecc;
+    --success-hover: #322a9e;
+    --primary: #ba34db;
+    --primary-hover: #641f75;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - Уменьшенная толщина */
+      header {
+            background-color: var(--bg-secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-desktop a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-desktop a:hover {
+            color: var(--accent);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone {
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+
+        .slider i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+        }
+
+        .slider .sun {
+            left: 8px;
+            color: #ffc107;
+        }
+
+        .slider .moon {
+            right: 8px;
+            color: #fff;
+        }
+
+        .nav-mobile {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+/* Увеличьте логотип */
+.logo img {
+    height: 70px; /* Увеличено с предыдущего размера */
+}
+
+/* Стили для значка профиля */
+.profile-icon {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow);
+}
+
+.profile-icon:hover {
+    color: var(--accent);
+    background-color: var(--bg-secondary);
+    transform: scale(1.05) rotate(5deg);
+}
+
+
+/* Модальное окно авторизации - уменьшенное */
+.auth-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.auth-modal-content {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    width: 700px;
+    max-width: 90%;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.auth-modal-content:hover {
+    transform: translateY(-3px);
+}
+
+.auth-form-container {
+    flex: 1;
+    padding: 25px;
+}
+
+.auth-form-container h2 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(122, 23, 126, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Стили для кнопок */
+.auth-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.auth-btn:hover::before {
+    left: 100%;
+}
+
+/* Кнопка регистрации */
+#registerForm .auth-btn {
+    background: linear-gradient(135deg, var(--success), var(--success-hover));
+    color: white;
+    box-shadow: 0 6px 20px rgba(76, 40, 167, 0.25);
+}
+
+#registerForm .auth-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(167, 40, 167, 0.35);
+}
+
+/* Кнопка входа */
+#loginForm .auth-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    box-shadow: 0 6px 20px rgba(128, 0, 255, 0.25);
+}
+
+#loginForm .auth-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(162, 0, 255, 0.35);
+}
+
+.auth-btn:active {
+    transform: translateY(0) scale(1);
+}
+
+.auth-divider {
+    width: 2px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        var(--accent) 20%, 
+        var(--accent) 80%, 
+        transparent 100%);
+    margin: 25px 0;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: 'или';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-card);
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.close-auth-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    background: var(--bg-card);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.close-auth-modal:hover {
+    color: var(--accent);
+    background-color: var(--bg-primary);
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Адаптивность для модального окна */
+@media (max-width: 768px) {
+    .auth-modal-content {
+        flex-direction: column;
+        width: 85%;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .auth-divider {
+        width: 80%;
+        height: 2px;
+        margin: 15px auto;
+    }
+
+    .auth-form-container {
+        padding: 20px;
+    }
+
+    .auth-form-container h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-form-container {
+        padding: 15px;
+    }
+
+    .auth-form-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group input {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .auth-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Hero Секция */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/img/hero-cube.png') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Services Секция */
+.services {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.section-title h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-secondary);
+    position: relative;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.tab-btn.active {
+    color: var(--accent);
+}
+
+.tab-btn.active:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Всплывающее меню */
+.accordion {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.accordion-header {
+    background-color: var(--bg-card);
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: var(--bg-secondary);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accordion-content {
+    background-color: var(--bg-card);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: 15px;
+}
+
+.accordion-content p {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.accordion-content ul {
+    padding-left: 18px;
+    margin-bottom: 12px;
+}
+
+.accordion-content li {
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.service-detail {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.service-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.feature-icon {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(142, 102, 142, 1);
+    padding: 40px 0 15px;
+    border-top: 1px solid var(--border);
+    transition: background-color 0.3s;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #c2c2c2;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.contact-details {
+    color: #c2c2c2;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    color: #c2c2c2;
+    font-size: 0.85rem;
+}
+
+/* Адаптив под мобилки */
+@media (max-width: 768px) {
+    .nav-desktop, .contact-info {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        padding: 15px;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-mobile.active {
+        display: block;
+    }
+
+    .nav-mobile a {
+        display: block;
+        padding: 8px 0;
+        color: var(--text-primary);
+        text-decoration: none;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .service-detail {
+        flex-direction: column;
+    }
+
+    .service-features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        padding: 10px 15px;
+    }
+
+    .tab-btn.active:after {
+        display: none;
+    }
+
+    .accordion-header {
+        padding: 12px;
+    }
+
+    .accordion-header h3 {
+        font-size: 1rem;
+    }
+
+    .accordion-content.active {
+        padding: 12px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Дополнительные стили для улучшения UX */
+.form-group input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.8;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Анимация появления модального окна */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.auth-modal-content {
+    animation: modalFadeIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Стили для иконки внутри кнопки закрытия */
+.close-auth-modal i {
+    margin-top: 1px;
+}
+
+/* Индикатор фокуса для доступности */
+.auth-btn:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+/* Плавное появление placeholder */
+.form-group input::placeholder {
+    transition: opacity 0.3s ease;
+}
+
+.form-group input:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* Service icon styles */
+.service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    border-radius: 6px;
+    color: white;
+    font-size: 0.9rem;
+}
