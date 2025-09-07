@@ -674,10 +674,27 @@ body {
     color: var(--accent);
 }
 
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .product-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    position: static;
+    background: var(--bg-card);
 }
 
 .product-price {
